@@ -4,7 +4,7 @@ body {
 
 .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 body .background {
@@ -31,4 +31,29 @@ body .background {
 
 .image-background-container {
   margin: 0% -20%;
+}
+
+.row {
+  z-index: 2;
+  position: relative;
+}
+
+#title {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+.container.wrapper::before {
+  background-image: url('../img/details.png');
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  top: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
