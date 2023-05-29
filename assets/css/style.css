@@ -235,6 +235,22 @@ body .background {
     top: -3% !important;
     display: block;
   }
+
+  #middle #text {
+    padding: 90px 15%;
+  }
+
+  #text .title::after {
+    background-size: contain;
+  }
+
+  #text .title {
+    font-size: 15px;
+  }
+
+  #text .paragraph {
+    font-size: 13px;
+  }
 }
 
 @media only screen and (max-width: 540px) {
