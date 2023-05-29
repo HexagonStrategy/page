@@ -1,7 +1,3 @@
-body {
-  background-color: black;
-}
-
 .container {
   position: relative;
   z-index: 2;
@@ -24,21 +20,11 @@ body .background {
   z-index: 0;
 }
 
-#container-background {
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image-background-container {
-  margin: 0% -20%;
-}
-
-.row {
+.message-background {
   z-index: 2;
   position: relative;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 #title {
@@ -51,26 +37,21 @@ body .background {
 
 #title {
   background-image: url("../img/site-header.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
   position: absolute;
 }
 
 #upper {
   background-image: url("../img/site-upper.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
   width: 100%;
   height: 240px;
 }
 
 #middle {
   background-image: url("../img/middle.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
   width: 100%;
   height: 735px;
 }
+
 #middle .buttons-container {
   display: flex;
   justify-content: space-between;
@@ -133,8 +114,130 @@ body .background {
 
 #bottom {
   background-image: url("../img/site-bottom.png");
-  background-repeat: no-repeat;
-  background-position-x: center;
   width: 100%;
   height: 620px;
+}
+
+@media only screen and (max-width: 780px) {
+  .container {
+    width: 100%;
+  }
+
+  .message-background {
+    background-size: contain;
+  }
+
+  #title {
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-top: 90px;
+    padding-bottom: 10vh;
+  }
+
+  #upper {
+    height: 24vw;
+    margin-top: -72px;
+  }
+
+  #middle {
+    height: auto;
+    width: 87.8vw;
+    background-repeat: repeat-y;
+    margin: auto;
+    background-size: cover;
+  }
+
+  #middle .buttons-container {
+    top: -24%;
+    padding: 0px 15%;
+  }
+
+  .buttons div {
+    width: 133px;
+    height: 64px;
+    background-size: cover;
+    font-size: 10px;
+    line-height: 64px;
+  }
+
+  #middle #text {
+    position: initial;
+    padding: 1px 15%;
+  }
+
+  #text .title {
+    font-size: 18px;
+  }
+
+  #text .title::after {
+    background-size: cover;
+  }
+
+  #text .paragraph {
+    font-size: 14px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  #bottom {
+    height: 62vw;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  #middle .buttons-container {
+    top: -64px !important;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  #middle {
+    background-size: contain !important;
+    width: 90.5% !important;
+  }
+
+  #middle #text {
+    padding: 74px 15%;
+  }
+
+  #middle .buttons-container {
+    top: -48px !important;
+    display: block;
+  }
+
+  #middle .buttons {
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .buttons div {
+    height: 53px !important;
+    line-height: 54px !important;
+  }
+}
+
+@media only screen and (max-width: 632px) {
+  #middle .buttons-container {
+    top: -35px !important;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  #middle .buttons-container {
+    top: -3% !important;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #middle {
+    width: 87.9vw !important;
+  }
+
+  #middle .buttons-container {
+    top: -3% !important;
+    display: block;
+  }
 }
