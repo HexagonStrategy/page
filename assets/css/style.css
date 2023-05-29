@@ -1,3 +1,7 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .container {
   position: relative;
   z-index: 2;
@@ -76,6 +80,7 @@ body .background {
   text-align: center;
   color: #fff;
   line-height: 60px;
+  font-weight: 800;
 }
 
 .buttons div:nth-child(2n) {
@@ -96,6 +101,7 @@ body .background {
 
 #text .title {
   margin: 5px 0px;
+  letter-spacing: 10px;
 }
 
 #text .title::after {
