@@ -5,10 +5,13 @@ body {
 .container {
   position: relative;
   z-index: 2;
+  width: 747px;
+  margin: auto;
+  padding-top: 6em;
 }
 
 body .background {
-  background-image: url('../img/background.png');
+  background-image: url("../img/site-background.png");
   display: block;
   position: fixed;
   left: 0;
@@ -39,21 +42,99 @@ body .background {
 }
 
 #title {
-  padding-top: 12em;
-  padding-bottom: 12em;
+  padding-top: 13em;
+  padding-bottom: 7em;
+  z-index: 3;
+  top: 0px;
+  width: 100%;
 }
 
-.container.wrapper::before {
-  background-image: url('../img/details.png');
-  content: '';
-  position: absolute;
+#title {
+  background-image: url("../img/site-header.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  top: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
+  background-position-x: center;
+  position: absolute;
+}
+
+#upper {
+  background-image: url("../img/site-upper.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 240px;
+}
+
+#middle {
+  background-image: url("../img/middle.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 735px;
+}
+#middle .buttons-container {
+  display: flex;
+  justify-content: space-between;
+  top: -53px;
+  position: absolute;
+  z-index: 3;
+  box-sizing: border-box;
+  padding: 0 56px;
+  width: 100%;
+}
+
+#middle .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.buttons div {
+  width: 180px;
+  height: 60px;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+}
+
+.buttons div:nth-child(2n) {
+  background-image: url("../img/buttons/site-button-02.png");
+}
+
+.buttons div:nth-child(1n) {
+  background-image: url("../img/buttons/site-button-01.png");
+}
+
+#middle #text {
+  position: absolute;
+  z-index: 3;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px 56px;
+}
+
+#text .title {
+  margin: 5px 0px;
+}
+
+#text .title::after {
+  content: "";
+  width: 100%;
+  background-image: url("../img/divider.png");
+  height: 38px;
+  display: block;
+  background-position: center;
+}
+
+#text .paragraph {
+  color: #876c3d;
+  margin: 8px 0px 50px 0px;
+}
+
+#bottom {
+  background-image: url("../img/site-bottom.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  width: 100%;
+  height: 620px;
 }
