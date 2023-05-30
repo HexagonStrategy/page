@@ -27,62 +27,41 @@
         </div>
         <div id="text">
           <h2 class="title">
-            SUBTITULO
+            ABOUT
           </h2>
           <img src="./assets/img/divider.png" class="divider"/>
           <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
+            Kalimour is a tactical city-building game where you must raise a kingdom in hostile lands filled with wild beasts,
+            treacherous bandits and rival lords. Expand your borders, raise an army and take charge of your new land.</br></br>
+            <b>Grow your economy and let your kingdom thrive</b></br>
+            Explore strange lands for resources and hidden caches of treasure, spread your kingdom's reach and build up your
+            settlement’s infrastructure. Farm, hunt and mine all you, leave your mark and become the richest kingdom in the world.
+            </br></br>
+            <b>Defeat your enemies and conquer the world</b></br>
+            Protect your people from savage beasts, fend off greedy bandits and march your army against rival kingdoms
+            as you grow your military power. Bring your force to bear on your enemies, take control of their
+            territory and make yourself known as the true ruler of this land.</br></br>
+            <b>Raise an army worthy of a king</b></br>
+            Train a wide variety of troops to fit your strategy: Elite knights that can take a beating to hold the line,
+            Archers to keep your enemies at bay, cheap and fast Scouts to overwhelm your foes, and many more. You will face many
+            different enemies in your campaign for conquest, so remember to change your strategy to adapt to new challenges.
           </p>
           <h2 class="title">
-            SUBTITULO
+            CONTACT
           </h2>
           <img src="./assets/img/divider.png" class="divider"/>
           <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
+            Email:
+            <a href="mailto:support@kalimourgame.com">support@kalimourgame.com</a>
           </p>
+          <h2 class="title">
+            BUY
+          </h2>
+          <img src="./assets/img/divider.png" class="divider"/>
           <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum
+            <a href="https://store.steampowered.com/app/2402460/Kalimour/">
+            <img src="./assets/img/steam_logo.png" class="divider"></img>
+            </a>
           </p>
         </div>
         </div>
@@ -97,7 +76,7 @@
 
         if(height > 0){
           let background = "url('./assets/img/site-upper.png'), url('./assets/img/middle.png')";
-  
+
           const initialHeight = (67 * width)/115 - 1
           let backgroundCalc = initialHeight;
           let backgroundPosition = 'top,'+initialHeight+'px';
@@ -111,17 +90,17 @@
             backgroundCalc += middleHeight;
             backgroundPosition += `, ${backgroundCalc}px`;
             middle.style.backgroundPositionY = backgroundPosition;
-            
+
             height -= middleHeight;
           }
         }
       }
-      
+
       window.onresize = function(event) {
         changeMiddle()
       };
 
-      document.addEventListener('DOMContentLoaded', function(){ 
+      document.addEventListener('DOMContentLoaded', function(){
         changeMiddle()
       }, false);
 
