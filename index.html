@@ -14,9 +14,7 @@
   <body>
     <div class="background"></div>
     <div class="container">
-      <div class="message-background" id="title"></div>
-      <div class="message-background" id="upper"></div>
-      <div class="message-background" id="middle">
+      <div id="middle">
         <div class="buttons-container">
           <div class="buttons">
             <div class="col col-3">BUY</div>
@@ -31,6 +29,7 @@
           <h2 class="title">
             SUBTITULO
           </h2>
+          <img src="./assets/img/divider.png" class="divider"/>
           <p class="paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -40,7 +39,46 @@
           <h2 class="title">
             SUBTITULO
           </h2>
+          <img src="./assets/img/divider.png" class="divider"/>
           <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+          </p>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
             ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
@@ -50,7 +88,43 @@
         </div>
         <div class="message-background" id="bottom"></div>
       </div>
-      
     </div>
+    <script>
+      function changeMiddle() {
+        const middle = document.getElementById("middle");
+        const width = middle.offsetWidth;
+        let height = middle.offsetHeight;
+
+        if(height > 0){
+          let background = "url('./assets/img/site-upper.png'), url('./assets/img/middle.png')";
+  
+          const initialHeight = (67 * width)/115 - 1
+          let backgroundCalc = initialHeight;
+          let backgroundPosition = 'top,'+initialHeight+'px';
+
+          const middleHeight = (185 * width)/115 - 1
+
+          while (height > 0) {
+            background += ", url('./assets/img/middle.png')"
+            middle.style.backgroundImage = background;
+
+            backgroundCalc += middleHeight;
+            backgroundPosition += `, ${backgroundCalc}px`;
+            middle.style.backgroundPositionY = backgroundPosition;
+            
+            height -= middleHeight;
+          }
+        }
+      }
+      
+      window.onresize = function(event) {
+        changeMiddle()
+      };
+
+      document.addEventListener('DOMContentLoaded', function(){ 
+        changeMiddle()
+      }, false);
+
+      </script>
   </body>
 </html>

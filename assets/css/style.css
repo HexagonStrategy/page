@@ -1,13 +1,15 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+body * {
+  box-sizing: border-box;
+}
 
 .container {
   position: relative;
   z-index: 2;
-  width: 747px;
+  width: 795px;
   margin: auto;
-  padding-top: 6em;
 }
 
 body .background {
@@ -31,40 +33,26 @@ body .background {
   background-position-x: center;
 }
 
-#title {
-  padding-top: 13em;
-  padding-bottom: 7em;
-  z-index: 3;
-  top: 0px;
-  width: 100%;
-}
-
-#title {
-  background-image: url("../img/site-header.png");
-  position: absolute;
-}
-
-#upper {
-  background-image: url("../img/site-upper.png");
-  width: 100%;
-  height: 240px;
-}
-
 #middle {
-  background-image: url("../img/middle.png");
+  background-image: url("../img/site-upper.png"), url("../img/middle.png");
   width: 100%;
-  height: 735px;
+  height: auto;
+  z-index: 2;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top, 19vh;
+  margin-top: 5em;
+  padding-top: 105px;
+  background-size: contain;
 }
 
 #middle .buttons-container {
   display: flex;
   justify-content: space-between;
-  top: -53px;
-  position: absolute;
-  z-index: 3;
-  box-sizing: border-box;
   padding: 0 56px;
   width: 100%;
+  margin-top: 120px;
 }
 
 #middle .buttons {
@@ -75,12 +63,13 @@ body .background {
 
 .buttons div {
   width: 180px;
-  height: 60px;
+  height: 59px;
   background-position: center;
   text-align: center;
   color: #fff;
-  line-height: 60px;
+  line-height: 50px;
   font-weight: 800;
+  background-repeat: no-repeat;
 }
 
 .buttons div:nth-child(2n) {
@@ -92,25 +81,18 @@ body .background {
 }
 
 #middle #text {
-  position: absolute;
   z-index: 3;
-  box-sizing: border-box;
   width: 100%;
-  padding: 30px 56px;
+  padding: 30px 75px;
+}
+
+#text img {
+  width: 100%;
 }
 
 #text .title {
   margin: 5px 0px;
   letter-spacing: 10px;
-}
-
-#text .title::after {
-  content: "";
-  width: 100%;
-  background-image: url("../img/divider.png");
-  height: 38px;
-  display: block;
-  background-position: center;
 }
 
 #text .paragraph {
@@ -122,144 +104,96 @@ body .background {
   background-image: url("../img/site-bottom.png");
   width: 100%;
   height: 620px;
+  background-size: contain;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 820px) {
   .container {
     width: 100%;
-  }
-
-  .message-background {
-    background-size: contain;
-  }
-
-  #title {
-    width: 70%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding-top: 90px;
-    padding-bottom: 10vh;
-  }
-
-  #upper {
-    height: 24vw;
-    margin-top: -72px;
+    margin-top: 4vh;
   }
 
   #middle {
-    height: auto;
-    width: 87.8vw;
-    background-repeat: repeat-y;
-    margin: auto;
-    background-size: cover;
+    background-size: contain;
+    padding-top: 19vw;
   }
 
   #middle .buttons-container {
-    top: -24%;
-    padding: 0px 15%;
-  }
-
-  .buttons div {
-    width: 133px;
-    height: 64px;
-    background-size: cover;
-    font-size: 10px;
-    line-height: 64px;
-  }
-
-  #middle #text {
-    position: initial;
-    padding: 1px 15%;
-  }
-
-  #text .title {
-    font-size: 18px;
-  }
-
-  #text .title::after {
-    background-size: cover;
-  }
-
-  #text .paragraph {
-    font-size: 14px;
-    margin: 0px 0px 20px 0px;
+    margin-top: 8vh;
   }
 
   #bottom {
-    height: 62vw;
+    background-size: contain;
   }
 }
 
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 740px) {
   #middle .buttons-container {
-    top: -64px !important;
-  }
-}
-
-@media only screen and (max-width: 670px) {
-  #middle {
-    background-size: contain !important;
-    width: 90.5% !important;
-  }
-
-  #middle #text {
-    padding: 74px 15%;
-  }
-
-  #middle .buttons-container {
-    top: -48px !important;
-    display: block;
-  }
-
-  #middle .buttons {
-    justify-content: center;
-    width: 80%;
-    margin: auto;
+    margin-top: 7vh;
   }
 
   .buttons div {
-    height: 53px !important;
-    line-height: 54px !important;
-  }
-}
-
-@media only screen and (max-width: 632px) {
-  #middle .buttons-container {
-    top: -35px !important;
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 578px) {
-  #middle .buttons-container {
-    top: -3% !important;
-    display: block;
-  }
-
-  #middle #text {
-    padding: 90px 15%;
-  }
-
-  #text .title::after {
     background-size: contain;
-  }
-
-  #text .title {
-    font-size: 15px;
-  }
-
-  #text .paragraph {
+    background-repeat: no-repeat;
     font-size: 13px;
   }
 }
 
-@media only screen and (max-width: 540px) {
-  #middle {
-    width: 87.9vw !important;
+@media only screen and (max-width: 660px) {
+  #middle .buttons-container {
+    margin-top: 6vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #middle .buttons-container {
+    display: block;
+    padding: 0px;
   }
 
+  #middle .buttons {
+    width: 54%;
+    margin: auto;
+  }
+
+  .buttons div {
+    height: 52px;
+    line-height: 42px;
+  }
+
+  #middle #text {
+    padding: 30px 40px;
+  }
+
+  #text .title {
+    font-size: 14px;
+  }
+
+  #text .paragraph {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   #middle .buttons-container {
-    top: -3% !important;
-    display: block;
+    margin-top: 5vh;
+  }
+
+  #middle .buttons {
+    width: 70%;
+  }
+
+  .buttons div {
+    height: 46px;
+    line-height: 42px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #middle .buttons-container {
+    margin-top: 4.5vh;
   }
 }
